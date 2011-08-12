@@ -11,6 +11,9 @@ sub init : Test(1) {
 
 sub values : Tests {
     my $sorter = MergeSorter->new;
+		isa_ok $sorter, "Sorter";
+		isa_ok $sorter, "MergeSorter";
+
     is_deeply [$sorter->get_values], [];
 
     $sorter->set_values;
